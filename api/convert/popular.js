@@ -1,15 +1,13 @@
-import { createClient } from '@supabase/supabase-js';
+const { createClient } = require('@supabase/supabase-js');
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE
 );
 
-/** @type {import('vercel').VercelRequestHandler} */
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const limit = parseInt(req.query.limit, 10) || 8;
 
-  // Pull the raw rows (cheap for small data sets)
   const { data, error } = await supabase
     .from('conversions')
     .select('from, to');
@@ -31,4 +29,4 @@ export default async function handler(req, res) {
     });
 
   res.json(popular);
-}
+};
