@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Tracker - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <ul id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="converter.html">Converter</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+  <main class="grid">
+    <section class="quote-pane">
+      <h2>Live Rates</h2>
+      <table>
+        <thead>
+          <tr><th>Pair</th><th>LAST</th><th>CHANGE</th><th>%CHG</th></tr>
+        </thead>
+        <tbody id="quote-body"></tbody>
+      </table>
+    </section>
+  
+    <section class="chart-pane">
+      <canvas id="pairChart"></canvas>
+      <p id="pair-label" class="chart-caption"></p>
+    
+      <div id="scale-controls" class="scale-row">
+        <button data-range="1M">1 M</button>
+        <button data-range="3M">3 M</button>
+        <button data-range="6M">6 M</button>
+        <button data-range="1Y" class="active">1 Y</button>
+      </div>
+    
+      <button id="convert-btn" class="convert-btn">Convert this pair</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="js/shared.js"></script>
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

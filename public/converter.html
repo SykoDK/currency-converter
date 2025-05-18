@@ -1,0 +1,34 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <ul id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="converter.html">Converter</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Currency Converter</h1>
+    <form id="convertForm">
+      <label>From <input name="from" maxlength="3" value="USD"></label>
+      <label>To <input name="to" maxlength="3" value="EUR"></label>
+      <label>Amount <input name="amount" type="number" step="0.01" value="1"></label>
+      <button>Convert</button>
+    </form>
+    <p id="result"></p>
+    <section id="popular-box">
+      <h2>Popular conversions</h2>
+      <div id="popular-grid" class="pop-grid"></div>
+    </section>
+  </main>
+  <script type="module" src="js/shared.js"></script>
+  <script type="module" src="js/converter.js"></script>
+</body>
+</html>
