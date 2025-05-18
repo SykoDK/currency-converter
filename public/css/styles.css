@@ -500,3 +500,9 @@ tr.selected{ background:#c7d2fe !important; }
   border-color: var(--accent-dark,#1e40af);
 }
 
+.site-title{
+  margin: 1.2rem 1.5rem .4rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text, #1f2937);   /* uses existing palette if set */
+}
