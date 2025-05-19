@@ -75,186 +75,6 @@ body {
     margin: 0 auto;
   }
   
-  #reddit-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  
-  #reddit-table th,
-  #reddit-table td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: left;
-  }
-  
-  #dog-carousel .slider-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    object-position: center;
-    display: block;
-  }
-  
-  .breeds {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  
-  .breed-btn {
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid #0073ff;
-    background: #000000;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .breed-btn:hover {
-    background: #e6f0ff;
-  }
-  
-  #infoBox {
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    background: #fff;
-    border-radius: 0.5rem;
-  }
-  
-  #audio-box {
-    margin: 1rem auto;
-    width: 60%;
-    background: #ff040453;
-    border: 4px solid #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  #audio-box button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-  }
-  
-  #audio-box p {
-    margin: 0;
-    font-size: 0.875rem;
-  }
-  
-  .action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
-  }
-  
-  .cool-btn {
-    position: relative;
-    overflow: hidden;
-    padding: 1rem 2.5rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    z-index: 0;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  
-  .cool-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: var(--btn-grad);
-    transition: transform 0.45s ease;
-    transform: scale(1);
-  }
-  
-  .cool-btn:hover,
-  .cool-btn:focus-visible {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-  }
-  
-  .cool-btn:hover::before,
-  .cool-btn:focus-visible::before {
-    transform: scale(1.15) rotate(2deg);
-  }
-  
-  .stocks-btn {
-    --btn-grad: linear-gradient(135deg, #667db6 0%, #0082c8 50%, #00c6ff 100%);
-  }
-  
-  .dogs-btn {
-    --btn-grad: linear-gradient(135deg, #f3904f 0%, #ffb56b 50%, #f9d423 100%);
-  }
-  
-  .mic-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .mic-btn {
-    position: relative;
-    overflow: hidden;
-    padding: 0.75rem 2rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border-radius: 50px;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  
-  .mic-btn::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: var(--mic-grad);
-    transition: transform 0.45s ease;
-  }
-  
-  .mic-btn:hover {
-    transform: translateY(-3px);
-  }
-  
-  .mic-btn:hover::before {
-    transform: scale(1.12) rotate(2deg);
-  }
-  
-  .mic-btn--on {
-    --mic-grad: linear-gradient(135deg, #7f7f7f 0%, #9b9b9b 100%);
-  }
-  
-  .mic-btn--off {
-    --mic-grad: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-  }
-  
-  .mic-btn--on.listening {
-    --mic-grad: linear-gradient(135deg, #3cb371 0%, #4cd964 100%);
-    animation: micGlow 1.4s ease-in-out infinite;
-  }
-  
-  @keyframes micGlow {
-    0%, 100% {
-      box-shadow: 0 0 0 0 rgba(76, 217, 100, 0.60);
-    }
-    50% {
-      box-shadow: 0 0 0 12px rgba(76, 217, 100, 0);
-    }
-  }
 
   .btn-row {
     margin: 1rem 0 2rem;
@@ -266,14 +86,12 @@ body {
     padding: .4rem .8rem;
     border: none;
     border-radius: .4rem;
-    background: #2563eb;        /* indigo-600 */
+    background: #2563eb;
     color: #fff;
     cursor: pointer;
   }
-  .btn-row button:hover { background:#1e40af; }  /* indigo-700 */
+  .btn-row button:hover { background:#1e40af; }
 
-  
-  /* === layout === */
 main.grid {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -292,19 +110,18 @@ main.grid {
 }
 .quote-pane tr:hover { background:#f0f4ff; cursor:pointer; }
 
-td.up   { color: #16a34a; }   /* green 600 */
-td.down { color: #dc2626; }   /* red   600 */
+td.up   { color: #16a34a; }   
+td.down { color: #dc2626; }   
 
 .chart-caption {
   margin-top: .5rem;
   font-weight: 600;
   text-align: center;
 }
-/* styles.css */
-/* styles.css  ── add anywhere after your grid rules */
-.chart-pane       { height: 260px; }   /* pick any height you like */
+
+.chart-pane       { height: 260px; }   
 .chart-pane canvas{
-  height: 100% !important;             /* fill that space */
+  height: 100% !important;             
   width:  100% !important;
 }
 
@@ -319,33 +136,27 @@ td.down { color: #dc2626; }   /* red   600 */
 }
 .popular-grid button {
   padding: .35rem .6rem;
-  border: 1px solid #d1d5db;   /* gray-300 */
+  border: 1px solid #d1d5db;   
   border-radius: .4rem;
-  background: #f9fafb;         /* gray-50 */
+  background: #f9fafb;         
   cursor: pointer;
   font-size: .85rem;
 }
 .popular-grid button:hover {
-  background: #eff6ff;         /* indigo-50 */
-  border-color: #93c5fd;       /* indigo-300 */
+  background: #eff6ff;
+  border-color: #93c5fd;
 }
 
 
-/* ──────────────────────────────────────────────────────────────
-   Currency-tracker home page polish
-   paste BELOW your existing rules
-   ────────────────────────────────────────────────────────────── */
-
-/* === colour palette vars for easy tweaking === */
 :root{
-  --bg          : #f9fafb;     /* page background        */
-  --panel       : #ffffff;     /* table / chart panels   */
-  --border      : #e5e7eb;     /* gray-200               */
-  --text        : #1f2937;     /* gray-800               */
-  --accent      : #2563eb;     /* indigo-600             */
-  --accent-dark : #1e40af;     /* indigo-700             */
-  --up          : #16a34a;     /* green-600              */
-  --down        : #dc2626;     /* red-600                */
+  --bg: #f9fafb;
+  --panel: #ffffff;
+  --border: #e5e7eb;
+  --text: #1f2937;
+  --accent: #2563eb;
+  --accent-dark: #1e40af;
+  --up: #16a34a;
+  --down: #dc2626;
 }
 
 body{
@@ -354,18 +165,17 @@ body{
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
-/* === grid layout === */
+
 main.grid{
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 1.5rem;
   padding: 1.2rem 1.5rem;
 }
-@media(max-width: 820px){        /* stack on narrow screens */
+@media(max-width: 820px){   
   main.grid{ grid-template-columns: 1fr; }
 }
 
-/* === left panel: quote table === */
 .quote-pane{
   background: var(--panel);
   border: 1px solid var(--border);
@@ -396,14 +206,13 @@ main.grid{
 .quote-pane td:nth-child(3),
 .quote-pane td:nth-child(4){ text-align: right; }
 
-.quote-pane tr:nth-child(even){ background: #f3f4f6; }     /* zebra */
-.quote-pane tr:hover{ background:#e0e7ff; cursor:pointer; }/* hover */
+.quote-pane tr:nth-child(even){ background: #f3f4f6; }
+.quote-pane tr:hover{ background:#e0e7ff; cursor:pointer; }
 
 td.up   { color: var(--up); }
 td.down { color: var(--down); }
 tr.selected{ background:#c7d2fe !important; }
 
-/* === right panel: chart + button === */
 .chart-pane{
   background: var(--panel);
   border: 1px solid var(--border);
@@ -411,10 +220,10 @@ tr.selected{ background:#c7d2fe !important; }
   padding: 1rem 1.2rem;
   display: flex;
   flex-direction: column;
-  height: 320px;          /* total vertical space incl. button */
+  height: 320px;
 }
 .chart-pane canvas{
-  flex: 1 1 auto;         /* chart fills available height */
+  flex: 1 1 auto;
   width: 100% !important;
 }
 .chart-caption{
@@ -424,7 +233,6 @@ tr.selected{ background:#c7d2fe !important; }
   font-weight: 600;
 }
 
-/* === convert button === */
 .convert-btn{
   align-self: center;
   margin-top: .9rem;
@@ -440,7 +248,6 @@ tr.selected{ background:#c7d2fe !important; }
 }
 .convert-btn:hover{ background: var(--accent-dark); }
 
-/* ───────────────── popular conversions panel ─────────────── */
 #popular-box {
   margin-top: 2.2rem;
 }
@@ -504,5 +311,5 @@ tr.selected{ background:#c7d2fe !important; }
   margin: 1.2rem 1.5rem .4rem;
   font-size: 1.7rem;
   font-weight: 700;
-  color: var(--text, #1f2937);   /* uses existing palette if set */
+  color: var(--text, #1f2937);
 }
