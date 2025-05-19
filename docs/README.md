@@ -9,3 +9,4 @@ This website was designed to track changes in currency for up to a year, as well
 Our target platforms are iOS, Android, and Desktop. The user interface is fully responsive on all platforms. On the desktop screen and tablets, it shows a two-column layout, while on a small phone screen, it collapses down into a single column.
 
 # Developer Manual
+https://github.com/SykoDK/currency-converter/blob/main/docs/DeveloperManual.md
