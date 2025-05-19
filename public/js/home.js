@@ -5,7 +5,7 @@ let chart;
 let currentBase;
 let currentRange = '1Y';
 
-const RANGE_MAP = { '1M': 30, '3M': 90, '6M': 180, '1Y': 365, '4Y': 365 * 4 };
+const RANGE_MAP = { '1M': 30, '3M': 90, '6M': 180, '1Y': 365};
 
 document.addEventListener('DOMContentLoaded', async () => {
   const convertBtn = document.getElementById('convert-btn');
@@ -112,8 +112,11 @@ async function drawChart(baseCode, rangeKey) {
     }
   });
 
+  const latestISO = labels[labels.length - 1];              
+  const latestFmt = dayjs(latestISO).format('MMM D, YYYY');
+
   document.getElementById('pair-label').textContent =
-    `${baseCode}/USD — last ${rangeKey}`;
+    `${baseCode}/USD — last ${rangeKey} (through ${latestFmt})`;
 }
 
 function updateConvertLink(btn) {

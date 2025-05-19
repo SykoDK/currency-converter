@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/SykoDK/currency-converter/issues"
   },
-  "homepage": "https://github.com/SykoDK/currency-converter#readme"
+  "homepage": "https://github.com/SykoDK/currency-converter#readme",
+  "devDependencies": {
+    "supertest": "^7.1.1",
+    "vitest": "^3.1.3"
+  }
 }
